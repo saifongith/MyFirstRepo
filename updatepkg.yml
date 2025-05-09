@@ -1,0 +1,10 @@
+---
+
+- name: Update packages
+
+  tasks:
+     - name: Updating packages
+       dnf:
+            name: "*"
+            state: latest
+  hosts: myrockys

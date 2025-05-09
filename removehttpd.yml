@@ -1,0 +1,14 @@
+---
+
+- name: Delete package
+  hosts: myrockys
+  become: true
+
+  tasks:
+  
+
+    - name: Delete package
+      ansible.builtin.package:
+       name: httpd
+       state: absent
+

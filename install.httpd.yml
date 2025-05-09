@@ -1,0 +1,11 @@
+---
+- name: Install Apache on Rocky servers
+  hosts: all
+  become: true
+
+  tasks:
+    - name: Ensure httpd package is installed
+      ansible.builtin.package:
+        name: httpd
+        state: latest
+

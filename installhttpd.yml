@@ -1,0 +1,16 @@
+---
+
+- name: Install and Start HTTPd
+  hosts: myrockys
+  become: true
+
+  tasks:
+    - name: Install httpd
+      dnf:
+        name: httpd
+        state: latest
+    - name: Start it
+      service:
+        name: httpd
+        state: started
+        enabled: true
