@@ -18,4 +18,11 @@
       dnf:
           name: httpd
           state: latest
-
+    - name: copy default html file to site
+      tags: httpd
+      copy:
+        src: /home/saifon/MyFirstRepo/file/default_site.html
+        dest: /var/www/html/index.html
+        owner: root
+        group: root
+        mode: 0644
